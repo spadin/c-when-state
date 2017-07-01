@@ -3,5 +3,10 @@ module.exports = {
   npm: {
     esModules: true,
     umd: false
+  },
+  webpack: {
+    compat: {
+      enzyme: true
+    }
   }
 }

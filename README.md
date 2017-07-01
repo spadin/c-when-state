@@ -1,16 +1,18 @@
-# c-when-state
+# `<WhenState/>`
 
 [![Travis][build-badge]][build]
 [![npm package][npm-badge]][npm]
 [![Coveralls][coveralls-badge]][coveralls]
 
-Describe c-when-state here.
+### Use case
 
-[build-badge]: https://img.shields.io/travis/user/repo/master.png?style=flat-square
-[build]: https://travis-ci.org/user/repo
+See demo/src/index.js
 
-[npm-badge]: https://img.shields.io/npm/v/npm-package.png?style=flat-square
-[npm]: https://www.npmjs.org/package/npm-package
+[build-badge]: https://img.shields.io/travis/spadin/c-when-state/master.png?style=flat-square
+[build]: https://travis-ci.org/spadin/c-when-state
 
-[coveralls-badge]: https://img.shields.io/coveralls/user/repo/master.png?style=flat-square
-[coveralls]: https://coveralls.io/github/user/repo
+[npm-badge]: https://img.shields.io/npm/v/c-when-state.png?style=flat-square
+[npm]: https://www.npmjs.org/package/c-when-state
+
+[coveralls-badge]: https://img.shields.io/coveralls/spadin/c-when-state/master.png?style=flat-square
+[coveralls]: https://coveralls.io/github/spadin/c-when-state

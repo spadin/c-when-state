@@ -1,15 +1,74 @@
-import React, {Component} from 'react'
+import React from 'react'
+import WhenState from '../../src/WhenState';
+import {connect, Provider} from 'react-redux';
+import {bindActionCreators, createStore} from 'redux';
 import {render} from 'react-dom'
 
-import Example from '../../src'
+const LOGIN = 'login';
+const LOGOUT = 'logout';
 
-class Demo extends Component {
-  render() {
-    return <div>
+const reducer = (_, {type}) => ({
+  [LOGIN]:  {loggedIn: true},
+  [LOGOUT]: {loggedIn: false},
+}[type]);
+
+const store = createStore(reducer);
+
+const login = () => ({type: LOGIN});
+const logout = () => ({type: LOGOUT});
+
+let Login = ({login}) => (
+  <a
+    href="#"
+    onClick={login}
+  >
+    login
+  </a>
+);
+Login = connect(null, (dispatch) => bindActionCreators({login}, dispatch))(Login);
+
+let Logout = ({logout}) => (
+  <a
+    href="#"
+    onClick={logout}
+  >
+    logout
+  </a>
+);
+
+Logout = connect(null, (dispatch) => bindActionCreators({logout}, dispatch))(Logout);
+
+const loggedIn = ({loggedIn} = {}) => (loggedIn);
+const WhenLoggedIn = ({children}) => (
+  <WhenState predicate={loggedIn}>
+    {children}
+  </WhenState>
+);
+
+const notLoggedIn = ({loggedIn} = {}) => (!loggedIn);
+const WhenNotLoggedIn = ({children}) => (
+  <WhenState predicate={notLoggedIn}>
+    {children}
+  </WhenState>
+);
+
+const Demo = () => (
+  <Provider store={store}>
+    <div>
       <h1>c-when-state Demo</h1>
-      <Example/>
+      <WhenLoggedIn>
+        <span>
+          Logged in, cool! <Logout/>
+        </span>
+      </WhenLoggedIn>
+
+      <WhenNotLoggedIn>
+        <span>
+          Not logged in, bummer. <Login/>
+        </span>
+      </WhenNotLoggedIn>
     </div>
-  }
-}
+  </Provider>
+);
 
 render(<Demo/>, document.querySelector('#demo'))
