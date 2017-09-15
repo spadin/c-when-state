@@ -18,22 +18,16 @@ const login = () => ({type: LOGIN});
 const logout = () => ({type: LOGOUT});
 
 let Login = ({login}) => (
-  <a
-    href="#"
-    onClick={login}
-  >
+  <button onClick={login}>
     login
-  </a>
+  </button>
 );
 Login = connect(null, (dispatch) => bindActionCreators({login}, dispatch))(Login);
 
 let Logout = ({logout}) => (
-  <a
-    href="#"
-    onClick={logout}
-  >
+  <button onClick={logout}>
     logout
-  </a>
+  </button>
 );
 
 Logout = connect(null, (dispatch) => bindActionCreators({logout}, dispatch))(Logout);
