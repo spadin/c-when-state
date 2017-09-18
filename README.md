@@ -8,7 +8,7 @@
 
 ### Use case
 
-See demo/src/index.js
+See [demo/src/index.js][1]
 
 [build-badge]: https://img.shields.io/travis/spadin/c-when-state/master.png?style=flat-square
 [build]: https://travis-ci.org/spadin/c-when-state
@@ -18,3 +18,5 @@ See demo/src/index.js
 
 [coveralls-badge]: https://img.shields.io/coveralls/spadin/c-when-state/master.png?style=flat-square
 [coveralls]: https://coveralls.io/github/spadin/c-when-state
+
+[1]: https://github.com/spadin/c-when-state/blob/master/demo/src/index.js
