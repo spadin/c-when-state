@@ -32,9 +32,9 @@ let Logout = ({logout}) => (
 
 Logout = connect(null, (dispatch) => bindActionCreators({logout}, dispatch))(Logout);
 
-const loggedIn = ({loggedIn} = {}) => (loggedIn);
+const isLoggedIn = ({loggedIn} = {}) => (loggedIn);
 const WhenLoggedIn = ({children}) => (
-  <WhenState predicate={loggedIn}>
+  <WhenState predicate={isLoggedIn}>
     {children}
   </WhenState>
 );
