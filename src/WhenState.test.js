@@ -51,4 +51,19 @@ describe('<WhenState>', () => {
     );
     expect(component).to.contain(children);
   });
+
+  it('renders using render function when passed in', () => {
+    const store = mockStore({isTesting: true});
+    const children = <span>Children from a render function</span>;
+
+    const component = mount(
+      <WhenState
+        predicate={() => true}
+        store={store}
+        render={() => (children)}
+      />
+    );
+
+    expect(component).to.contain(children);
+  });
 });
