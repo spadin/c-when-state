@@ -1282,9 +1282,9 @@ bytes@2.4.0:
   version "2.4.0"
   resolved "https://registry.yarnpkg.com/bytes/-/bytes-2.4.0.tgz#7d97196f9d5baf7f6935e25985549edd2a6c2339"
 
-c-when@2.x:
-  version "2.0.3"
-  resolved "https://registry.yarnpkg.com/c-when/-/c-when-2.0.3.tgz#042d71a051517eb3b6078fb147f40e946afcbafb"
+c-when@3.x:
+  version "3.0.0"
+  resolved "https://registry.yarnpkg.com/c-when/-/c-when-3.0.0.tgz#562c9a29c5d4ec71e66bd50dd83d2b7fc334b15c"
 
 callsite@1.0.0:
   version "1.0.0"

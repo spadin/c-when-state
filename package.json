@@ -19,7 +19,7 @@
     "test:watch": "nwb test-react --server"
   },
   "dependencies": {
-    "c-when": "2.x"
+    "c-when": "3.x"
   },
   "peerDependencies": {
     "react": "*",
