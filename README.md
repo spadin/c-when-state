@@ -20,3 +20,11 @@ See [demo/src/index.js][1]
 [coveralls]: https://coveralls.io/github/spadin/c-when-state
 
 [1]: https://github.com/spadin/c-when-state/blob/master/demo/src/index.js
+
+### Developing
+
+Watch tests
+
+```
+$ yarn test:watch
+```
