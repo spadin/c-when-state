@@ -33,34 +33,40 @@ let Logout = ({logout}) => (
 Logout = connect(null, (dispatch) => bindActionCreators({logout}, dispatch))(Logout);
 
 const isLoggedIn = ({loggedIn} = {}) => (loggedIn);
-const WhenLoggedIn = ({children}) => (
-  <WhenState predicate={isLoggedIn}>
-    {children}
-  </WhenState>
+const WhenLoggedIn = ({render}) => (
+  <WhenState
+    predicate={isLoggedIn}
+    render={render}
+  />
 );
 
 const notLoggedIn = ({loggedIn} = {}) => (!loggedIn);
-const WhenNotLoggedIn = ({children}) => (
-  <WhenState predicate={notLoggedIn}>
-    {children}
-  </WhenState>
+const WhenNotLoggedIn = ({render}) => (
+  <WhenState
+    predicate={notLoggedIn}
+    render={render}
+  />
 );
 
 const Demo = () => (
   <Provider store={store}>
     <div>
       <h1>c-when-state Demo</h1>
-      <WhenLoggedIn>
-        <span>
-          Logged in, cool! <Logout/>
-        </span>
-      </WhenLoggedIn>
+      <WhenLoggedIn
+        render={() => (
+          <span>
+            Logged in, cool! <Logout/>
+          </span>
+        )}
+      />
 
-      <WhenNotLoggedIn>
-        <span>
-          Not logged in, bummer. <Login/>
-        </span>
-      </WhenNotLoggedIn>
+      <WhenNotLoggedIn
+        render={() => (
+          <span>
+            Not logged in, bummer. <Login/>
+          </span>
+        )}
+      />
     </div>
   </Provider>
 );
