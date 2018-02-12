@@ -1,12 +1,8 @@
 import When from 'c-when';
 import {connect} from 'react-redux';
 
-const mapStateToProps = (state) => ({state});
-
-const mergeProps = ({state}, _, {children, predicate, render}) => ({
-  children,
-  render,
+const mapStateToProps = (state, {predicate}) => ({
   predicate: predicate(state),
 });
 
-export default connect(mapStateToProps, null, mergeProps)(When);
+export default connect(mapStateToProps)(When);
