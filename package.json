@@ -28,7 +28,7 @@
   },
   "devDependencies": {
     "chai": "^4.0.2",
-    "chai-enzyme": "^0.8.0",
+    "chai-enzyme": "^1.0.0-beta.1",
     "enzyme": "^2.9.1",
     "nwb": "~0.18.10",
     "react": "^15.6.1",
