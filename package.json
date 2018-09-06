@@ -29,7 +29,7 @@
   "devDependencies": {
     "chai": "^4.0.2",
     "chai-enzyme": "^0.8.0",
-    "enzyme": "^2.9.1",
+    "enzyme": "^3.6.0",
     "nwb": "~0.18.10",
     "react": "^15.6.1",
     "react-addons-test-utils": "^15.6.0",
